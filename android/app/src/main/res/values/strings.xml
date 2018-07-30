@@ -2,4 +2,6 @@
 <resources>
     <string name="button_tap">Tap</string>
     <string name="android">Android</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_second">SecondActivity</string>
 </resources>

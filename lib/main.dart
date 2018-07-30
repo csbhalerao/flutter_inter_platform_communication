@@ -10,12 +10,69 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
 
-        primarySwatch: Colors.blue,
-      ),
-      home: new MyHomePage(),
+      home: new Scaffold(
+          appBar: new AppBar(
+            title: new Text('Welcome to Flutter'),
+          ),
+          body: FlutterPage()
+      )
     );
+  }
+}
+
+class FlutterPage extends StatefulWidget {
+  @override
+  FlutterComponent createState() => new FlutterComponent();
+}
+
+class FlutterComponent extends State<FlutterPage> {
+  static const String _channel = 'test_activity';
+  static const platform = const MethodChannel(_channel);
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(itemCount: 1,
+        itemBuilder: (context, rowNumber) {
+      return new Container(
+          padding: EdgeInsets.all(16.0),
+          child: new Column(children: <Widget>[
+    new MaterialButton(
+        child:const Text('Open new Activity'),
+        elevation: 5.0,
+        height: 48.0,
+        minWidth: 250.0,
+        color: Colors.blue,
+        textColor: Colors.white,
+        onPressed: (){
+            print("button pressed");
+            _getNewActivity();
+
+          }
+          ),
+      ],
+    ),
+      );
+    }
+    );
+    }
+
+  Future<Null> _getNewActivity() async {
+    try {
+       await platform.invokeMethod('startNewActivity');
+
+    } on PlatformException catch (e) {
+      print(e.message);
+    }
+
+    setState(() {
+
+    });
   }
 }
 
