@@ -14,18 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae07fbe5-31a8-41de-aad4-a35457e6b0b8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/kotlinflutter/flutterapp/SecondActivity.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_second.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/content_second.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ios/Runner/SecondViewController.swift" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ios/Runner/SecondViewController.xib" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" afterPath="$PROJECT_DIR$/android/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/dimens.xml" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/layout/content_second.xml" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/content_second.xml" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -43,8 +37,8 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1067">
-              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="107">
+              <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -314,6 +308,7 @@
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958803" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -398,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="107">
+          <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
