@@ -15,37 +15,25 @@ var controller : FlutterViewController?
     
     let flutterChannel = FlutterMethodChannel.init(name: "test_activity", binaryMessenger: flutterViewController);
     flutterChannel.setMethodCallHandler { (flutterMethodCall, flutterResult) in
-        self.window?.rootViewController = nil
         
-        let viewToPush = SecondViewController()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.window?.rootViewController = nil
+            
+            let viewToPush = SecondViewController()
+            
+            let navigationController = UINavigationController(rootViewController: flutterViewController)
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.makeKeyAndVisible()
+            self.window.rootViewController = navigationController
+            navigationController.isNavigationBarHidden = true
+            navigationController.pushViewController(viewToPush, animated: true)
+        })
         
-        let navigationController = UINavigationController(rootViewController: flutterViewController)
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.makeKeyAndVisible()
-        self.window.rootViewController = navigationController
-        
-        navigationController.pushViewController(viewToPush, animated: true)
     }
     
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
 
-
-//    if let rootController = controller{
-//
-//        let controllerChannel = FlutterMethodChannel.init(name: "test_activity",
-//                                                          binaryMessenger: rootController);
-//        controllerChannel.setMethodCallHandler({
-//            (call: FlutterMethodCall, result: FlutterResult) -> Void in
-//            rootController.removeFromParentViewController()
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.makeKeyAndVisible()
-//            self.window?.rootViewController = UINavigationController(rootViewController: rootController)
-//            rootController.navigationController?.pushViewController(SecondViewController(), animated: true)
-//            //self.openViewController()
-//        });
-//    }
-
-//GeneratedPluginRegistrant.register(with: self)

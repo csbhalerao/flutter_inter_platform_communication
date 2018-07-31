@@ -16,9 +16,15 @@ class SecondViewController: UIViewController {
         
     }
     func setUpNavBar(){
-        self.view.backgroundColor = .red
         self.navigationItem.title = "IOS component"
         self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "back", style: UIBarButtonItemStyle.done, target: self, action: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.5) {
+            self.navigationController?.isNavigationBarHidden = false
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
