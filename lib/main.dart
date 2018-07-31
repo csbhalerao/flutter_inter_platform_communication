@@ -64,7 +64,7 @@ class FlutterComponent extends State<FlutterPage> {
 
   Future<Null> _getNewActivity() async {
     try {
-       await platform.invokeMethod('startNewActivity');
+       await platform.invokeMethod('');
 
     } on PlatformException catch (e) {
       print(e.message);
