@@ -5,4 +5,5 @@
     <dimen name="fab_elevation_pressed">12dp</dimen>
     <dimen name="font_size">17sp</dimen>
     <dimen name="platform_label_font_size">30sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

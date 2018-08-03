@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -9,13 +10,61 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
+        title: 'Flutter Demo',
+        home: new Scaffold(
+            appBar: new AppBar(
+              title: new Text('Welcome to Flutter'),
+            ),
+            body: FlutterPage()));
+  }
+}
 
-        primarySwatch: Colors.blue,
-      ),
-      home: new MyHomePage(),
-    );
+class FlutterPage extends StatefulWidget {
+  @override
+  FlutterComponent createState() => new FlutterComponent();
+}
+
+class FlutterComponent extends State<FlutterPage> {
+  static const String _channel = 'test_activity';
+  static const platform = const MethodChannel(_channel);
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        itemCount: 1,
+        itemBuilder: (context, rowNumber) {
+          return new Container(
+            padding: EdgeInsets.all(16.0),
+            child: new Column(
+              children: <Widget>[
+                new MaterialButton(
+                    child: const Text('Open Screen'),
+                    elevation: 5.0,
+                    height: 48.0,
+                    minWidth: 250.0,
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    onPressed: () {
+                      print("button pressed");
+                      _getNewActivity();
+                    }),
+              ],
+            ),
+          );
+        });
+  }
+
+  _getNewActivity() async {
+    try {
+      await platform.invokeMethod('startNewActivity');
+    } on PlatformException catch (e) {
+      print(e.message);
+    }
   }
 }
 
@@ -29,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static const String _pong = 'pong';
   static const String _emptyMessage = '';
   static const BasicMessageChannel<String> platform =
-  const BasicMessageChannel<String>(_channel, const StringCodec());
+      const BasicMessageChannel<String>(_channel, const StringCodec());
 
   int _counter = 0;
 
@@ -59,15 +108,17 @@ class _MyHomePageState extends State<MyHomePage> {
           new Expanded(
             child: new Center(
                 child: new Text(
-                    'Platform button tapped $_counter time${ _counter == 1 ? '' : 's' }.',
-                    style: const TextStyle(fontSize: 17.0))
-            ),
+                    'Platform button tapped $_counter time${ _counter == 1
+                        ? ''
+                        : 's' }.',
+                    style: const TextStyle(fontSize: 17.0))),
           ),
           new Container(
             padding: const EdgeInsets.only(bottom: 15.0, left: 5.0),
             child: new Row(
               children: <Widget>[
-                new Image.asset('assets/flutter-mark-square-64.png', scale: 1.5),
+                new Image.asset('assets/flutter-mark-square-64.png',
+                    scale: 1.5),
                 const Text('Flutter', style: const TextStyle(fontSize: 30.0)),
               ],
             ),
