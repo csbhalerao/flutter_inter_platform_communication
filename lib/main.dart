@@ -43,7 +43,7 @@ class FlutterComponent extends State<FlutterPage> {
             child: new Column(
               children: <Widget>[
                 new MaterialButton(
-                    child: const Text('Open new Activity'),
+                    child: const Text('Open Screen'),
                     elevation: 5.0,
                     height: 48.0,
                     minWidth: 250.0,
@@ -61,7 +61,7 @@ class FlutterComponent extends State<FlutterPage> {
 
   _getNewActivity() async {
     try {
-      await platform.invokeMethod('');
+      await platform.invokeMethod('startNewActivity');
     } on PlatformException catch (e) {
       print(e.message);
     }

@@ -26,7 +26,9 @@ class HomeActivity : FlutterActivity() {
         MethodChannel(flutterView, CHANNEL).setMethodCallHandler(
                 object : MethodCallHandler {
                     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
-                        startNewActivity()
+                        if(call.method.equals("startNewActivity")) {
+                            startNewActivity()
+                        }
                     }
                 })
 
