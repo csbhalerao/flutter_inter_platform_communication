@@ -26,13 +26,16 @@ import Flutter
                     self.window = UIWindow(frame: UIScreen.main.bounds)
                     self.window?.makeKeyAndVisible()
                     self.window.rootViewController = navigationController
-                    navigationController.isNavigationBarHidden = true
-                    navigationController.pushViewController(viewToPush, animated: true)
+                    navigationController.isNavigationBarHidden = false
+                    navigationController.pushViewController(viewToPush, animated: false)
+                    
                 })
             }
         }
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+    
+    
 }
 

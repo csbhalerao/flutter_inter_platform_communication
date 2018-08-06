@@ -19,20 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="opened ios component" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-33-QnZ">
-                    <rect key="frame" x="16" y="323" width="343" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opened iOS component" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-33-QnZ">
+                    <rect key="frame" x="16" y="100" width="343" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="giz-z2-l4Q"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.58431372549019611" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="zHh-33-QnZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gsR-7X-NCZ"/>
                 <constraint firstItem="zHh-33-QnZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="jbw-Kj-HL5"/>
+                <constraint firstItem="zHh-33-QnZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="uCh-yB-9GY"/>
                 <constraint firstAttribute="trailing" secondItem="zHh-33-QnZ" secondAttribute="trailing" constant="16" id="wuI-qI-oc5"/>
             </constraints>
         </view>
